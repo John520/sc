@@ -2,7 +2,7 @@ spring :
   application :
       name : config-server
 server :
-  port : 7001
+  port : 3301
 
 # git管理配置
 spring:
@@ -10,7 +10,8 @@ spring:
     config:
       server:
           git :
-           uri : https://github.com/John520/config-repo
-          searchPaths: config
+           uri : https://github.com/John520/sc
+          searchPaths: config-repo
           username: John520
           password: pt2809082xjj
+         default-label: master
