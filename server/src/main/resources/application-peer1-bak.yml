@@ -1,0 +1,14 @@
+server :
+  port : 6868
+spring :
+  application :
+    name : eureka-server
+eureka :
+  instance :
+     hostname : peer2
+  client :
+#    register-with-eureka : true
+#    fetch-registry : true
+    service-url :
+      defaultZone : http://peer2:6869/eureka/
+

@@ -1,0 +1,9 @@
+server :
+  port : 8882
+spring :
+  application :
+    name : provider2
+eureka :
+  client :
+    service-url :
+      defaultZone : http://peer1:1111/eureka/,http://peer2:1112/eureka/

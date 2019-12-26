@@ -1,0 +1,16 @@
+spring :
+  application :
+      name : config-server
+server :
+  port : 7001
+
+# git管理配置
+spring:
+  cloud:
+    config:
+      server:
+          git :
+           uri : https://github.com/John520/config-repo
+          searchPaths: config
+          username: John520
+          password: pt2809082xjj

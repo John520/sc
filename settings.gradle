@@ -1,0 +1,6 @@
+rootProject.name = 'sc'
+include 'server'
+include 'provider'
+include 'consumer'
+include 'config'
+
