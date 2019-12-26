@@ -1,0 +1,11 @@
+spring:
+  profiles:
+    active: dev
+server:
+  port: 3302
+
+data:
+  env: env-john
+  user:
+    username: john
+    password: 123

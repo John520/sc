@@ -3,4 +3,5 @@ include 'server'
 include 'provider'
 include 'consumer'
 include 'config'
+include 'config-client'
 
