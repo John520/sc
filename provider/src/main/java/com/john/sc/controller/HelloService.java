@@ -5,6 +5,7 @@ import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.time.LocalTime;
 import java.util.List;
 
 
@@ -17,6 +18,6 @@ public class HelloService {
     public String index(){
         List<String> services = client.getServices();
         services.forEach(it-> System.out.println("service:"+it+"\n"));
-        return "hello world";
+        return "hello world"+ LocalTime.now();
     }
 }
