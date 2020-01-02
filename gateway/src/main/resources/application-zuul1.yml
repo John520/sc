@@ -1,0 +1,16 @@
+server :
+  port : 5555
+spring :
+  application :
+    name : gateway
+# routes to url
+zuul:
+  routes :
+      consumer:
+          path : /consumer/**
+          serviceId : CONSUMER1
+
+eureka :
+  client :
+    service-url :
+      defaultZone : http://peer1:1111/eureka/,http://peer2:1112/eureka/

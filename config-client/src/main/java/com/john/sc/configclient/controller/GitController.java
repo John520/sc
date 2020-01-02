@@ -14,7 +14,7 @@ public class GitController {
 
 
     @GetMapping(value = "show")
-    public String show(){
+    public Object show(){
         return gitConfig.toString();
     }
 
