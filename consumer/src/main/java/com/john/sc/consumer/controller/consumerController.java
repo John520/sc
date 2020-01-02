@@ -3,7 +3,6 @@ package com.john.sc.consumer.controller;
 import com.john.sc.consumer.client.ComputeClient;
 import com.john.sc.consumer.client.MyFeginClient;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
-import com.netflix.ribbon.proxy.annotation.Hystrix;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
@@ -12,8 +11,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
-import java.util.List;
-
 @RestController
 public class consumerController {
 
@@ -21,7 +18,6 @@ public class consumerController {
     private RestTemplate restTemplate;
     @Autowired
     private LoadBalancerClient loadBalancerClient;
-
     @Autowired
     private MyFeginClient feginClient;
     @Autowired
@@ -33,7 +29,6 @@ public class consumerController {
         ServiceInstance serviceInstance = loadBalancerClient.choose("provider1");
         String url = "http://" + serviceInstance.getHost() + ":" + serviceInstance.getPort() + "/hello";
         System.out.println(url);
-        //restTemplate.getForObject("http://provider1/hello", String.class);
         return restTemplate.getForObject(url, String.class);
     }
     @RequestMapping(value = "/ribbon2")
