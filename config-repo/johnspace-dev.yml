@@ -13,5 +13,5 @@ spring:
 data:
   env: env-dev
   user:
-    username: john-dev-2
+    username: john-dev-update
     password: 123-dev
