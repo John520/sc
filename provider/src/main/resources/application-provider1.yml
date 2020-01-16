@@ -4,6 +4,11 @@ spring :
   application :
     name : provider1
 eureka :
+  hostname: johnspace.com
   client :
     service-url :
       defaultZone : http://peer1:1111/eureka/,http://peer2:1112/eureka/
+  instance:
+      statusPageUrl: http://${eureka.hostname}/info
+      healthCheckUrl: http://${eureka.hostname}/health
+      homePageUrl: http://${eureka.hostname}/
