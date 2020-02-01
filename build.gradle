@@ -44,6 +44,9 @@ subprojects {
         compile ( 'org.springframework.boot:spring-boot-starter-actuator')
 
         compile ('org.springframework.boot:spring-boot-starter-web')
+        // https://mvnrepository.com/artifact/com.google.guava/guava
+        compile group: 'com.google.guava', name: 'guava', version: '28.1-jre'
+
         testCompile('org.springframework.boot:spring-boot-starter-test')
     }
     dependencyManagement {
