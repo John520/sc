@@ -3,6 +3,10 @@ server :
 spring :
   application :
     name : consumer1
+
+feign:
+  hystrix:
+    enabled: true
 eureka :
   client :
     service-url :

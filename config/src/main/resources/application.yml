@@ -6,12 +6,18 @@ server :
 spring:
   application :
     name : config-server
-  cloud:
-    config:
-      server:
+  cloud :
+    config :
+      server :
           git :
             uri : https://github.com/John520/sc
             searchPaths: config-repo
             username: John520
             password: pt2809082xjj
             default-label: master
+
+
+eureka :
+  client :
+    service-url :
+      defaultZone : http://peer1:1111/eureka/,http://peer2:1112/eureka/
