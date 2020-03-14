@@ -48,6 +48,9 @@ subprojects {
         compile group: 'com.google.guava', name: 'guava', version: '28.1-jre'
 
         testCompile('org.springframework.boot:spring-boot-starter-test')
+        // https://mvnrepository.com/artifact/org.easymock/easymock
+        testCompile group: 'org.easymock', name: 'easymock', version: '4.1'
+
     }
     dependencyManagement {
         imports {
